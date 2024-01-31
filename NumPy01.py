@@ -1,4 +1,7 @@
 import numpy as np
+#Made for learning purposes, tutorial by Keith Galli
+
+
 a = np.array([1,2,3],dtype="int16")
 print(a)
 print(a.ndim) # Gives back the dimension of the array
@@ -103,3 +106,38 @@ v3 = np.vstack([v1,v2,v2])
 print(v3)
 #the same for horizontal stacks
 
+#LoadData from file
+# np.genfromtxt("filename",delimiter=",") loads data in float you can turn it into int32 but 
+#you have to assign it
+
+#Boolean masking (very nice) and Advanced Indexing
+
+
+
+
+random_array = np.random.randint(-3,7,size=(3,4))
+random_bigger0 = random_array[random_array>0] #gives back only numbers that are greater than 0 in the matrix
+
+print()
+print("------------------------")
+print()
+
+print(random_array)
+print(random_bigger0)
+
+print()
+print("------------------------")
+print()
+
+#You can index with a list in Numpy 
+
+print(random_bigger0[[1,2]]) # like this
+
+print()
+print("------------------------")
+print()
+
+print(random_array)
+print(np.any(random_array>4,axis=0)) #any of the columns are greater than 4
+print(np.all(random_array>4,axis=0)) #all of the columns are greater than 4
+print(np.any(random_array>4,axis=1)) #any of the rows are greater than 4
